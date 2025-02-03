@@ -23,5 +23,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		i++;
 	}
 	new[i] = '\0';
+	// free(s1);
 	return (new);
 }
