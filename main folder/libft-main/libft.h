@@ -19,6 +19,11 @@
 # include <string.h>
 # include <ctype.h>
 # include <stddef.h>
+# include <fcntl.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 10
+# endif
 
 typedef struct s_list
 {
@@ -74,5 +79,6 @@ int				ft_printf(const char *input, ...);
 int				ft_print_p(intptr_t *p);
 int				ft_print_hex(unsigned int nbr, const char input);
 int				ft_print_u(unsigned int n);
+char			*get_next_line(int fd);
 
 #endif
