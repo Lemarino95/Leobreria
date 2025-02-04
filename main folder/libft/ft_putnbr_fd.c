@@ -3,13 +3,19 @@
 fd: The file descriptor on which to write.
 Outputs the integer ’n’ to the given file
 descriptor. */
-void	ft_putnbr_fd(int n, int fd)
+size_t	ft_putnbr_fd(int n, int fd)
 {
 	char	*s;
+	size_t	i;
 
-	s = ft_itoa(n);
-	ft_putstr_fd(s, fd);
-	free(s);
+	i = 0;
+	if (fd)
+	{
+		s = ft_itoa(n);
+		i += ft_putstr_fd(s, fd);
+		free(s);
+	}
+	return (i);
 }
 /*
 ############# In alternative:#############
