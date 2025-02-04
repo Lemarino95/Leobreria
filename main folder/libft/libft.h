@@ -20,6 +20,8 @@
 # include <ctype.h>
 # include <stddef.h>
 # include <fcntl.h>
+# include <stdarg.h>
+# include <stdint.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 10
