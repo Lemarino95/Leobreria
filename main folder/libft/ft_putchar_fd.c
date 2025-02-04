@@ -1,9 +1,11 @@
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+size_t	ft_putchar_fd(char c, int fd)
 {
 	if (fd)
-		write(fd, &c, 1);
+		return (write(fd, &c, 1));
+	else
+		return (0);
 }
 
 /* 
