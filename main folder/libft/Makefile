@@ -1,7 +1,7 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 NAME = libft.a
-OBJ_DIR = ../obj
+OBJ_DIR = obj
 
 SRC = ft_atoi.c ft_strlen.c ft_bzero.c ft_strlcat.c ft_isalpha.c ft_isdigit.c\
 		ft_isalnum.c ft_isascii.c ft_isprint.c ft_tolower.c ft_toupper.c\
@@ -18,6 +18,9 @@ OBJECTS = ${SRC:%.c=$(OBJ_DIR)/%.o}
 
 all: $(OBJ_DIR) $(NAME)
 
+$(OBJ_DIR): 
+	@	mkdir 	$(OBJ_DIR)
+
 $(NAME):$(OBJECTS)
 	@	ar rc $(NAME) $(OBJECTS)
 
@@ -25,7 +28,7 @@ $(OBJ_DIR)/%.o: %.c | $(OBJ_DIR)
 	@	${CC} -c ${CFLAGS} -I. $< -o  $< -g $@
 
 clean:
-	@	rm -rf $(OBJECTS)
+	@	rm -rf $(OBJ_DIR)
 
 fclean: clean
 	@	rm -rf $(NAME)
