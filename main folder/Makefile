@@ -26,17 +26,20 @@ $(OBJ_DIR)/%.o: %.c | $(OBJ_DIR)
 	@	${CC} -c ${CFLAGS} -I$(LIBFT_DIR) $< -o $@
 
 $(LIBFT):
-	@$(MAKE) -C $(LIBFT_DIR)
+	@$(MAKE) -C $(LIBFT_DIR) --quiet
 
 clean:
 	@echo "Cleaning..."
 	@	rm -rf $(OBJECTS) $(OBJ_DIR)
-	@	$(MAKE) -C $(LIBFT_DIR) clean
+	@	$(MAKE) -C $(LIBFT_DIR) clean --quiet
 
 fclean: clean
-	@echo "FCleaning..."
+	@echo "Full Cleaning..."
 	@	rm -rf $(OBJ_DIR) $(NAME)
+	@	$(MAKE) -C $(LIBFT_DIR) fclean --quiet
 
 re: fclean all
+
+libft: $(LIBFT)
 
 .PHONY: all clean fclean re libft
