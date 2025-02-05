@@ -2,6 +2,6 @@
 # define PLACEHOLD_H
 
 
-# include "libft/libft.h"
+# include "libft.h"
 
 #endif
