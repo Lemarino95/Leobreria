@@ -15,7 +15,7 @@ static char	*ft_placenbr(char *s, size_t c, int n)
 		s[0] = '-';
 		n = -n;
 	}
-	while (n >= 1)
+	while (n > 0)
 	{
 		s[c--] = (n % 10) + 48;
 		n /= 10;
