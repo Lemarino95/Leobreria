@@ -6,7 +6,7 @@
 /*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 10:59:03 by lemarino          #+#    #+#             */
-/*   Updated: 2025/02/05 12:34:24 by lemarino         ###   ########.fr       */
+/*   Updated: 2025/02/12 18:41:58 by lemarino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,5 +83,6 @@ int				ft_print_p(intptr_t *p);
 int				ft_print_hex(unsigned int nbr, const char input);
 int				ft_print_u(unsigned int n);
 char			*get_next_line(int fd);
+void			*ft_realloc(void *ptr, size_t size);
 
 #endif
