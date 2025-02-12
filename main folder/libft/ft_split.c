@@ -56,25 +56,26 @@ static char	**freestr(char **s)
 // NULL if the allocation fails.
 char	**ft_split(char const *s, char c)
 {
-	int		i[2];
+	int		i;
+	int		j;
 	char	**r;
 
-	i[0] = 0;
-	i[1] = 0;
+	i = 0;
+	j = 0;
 	r = ft_calloc((count_words(s, c) + 1), sizeof(char *));
 	if (!r)
 		return (NULL);
-	while (s[i[0]] && count_words(s, c) != 0)
+	while (s[i] && count_words(s, c) != 0)
 	{
-		while (s[i[0]] == c)
-			i[0]++;
-		r[i[1]] = ft_substr(s, i[0], wordlen(&s[i[0]], c));
-		if (!r[i[1]])
+		while (s[i] == c)
+			i++;
+		r[j] = ft_substr(s, i, wordlen(&s[i], c));
+		if (!r[j])
 			return (freestr(r));
-		i[1]++;
-		i[0] += wordlen(&s[i[0]], c);
-		while (s[i[0]] == c && s[i[0]] != '\0')
-			i[0]++;
+		j++;
+		i += wordlen(&s[i], c);
+		while (s[i] == c && s[i] != '\0')
+			i++;
 	}
 	return (r);
 }
