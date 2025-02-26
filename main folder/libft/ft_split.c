@@ -6,32 +6,11 @@
 /*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 15:37:28 by lemarino          #+#    #+#             */
-/*   Updated: 2025/02/12 18:29:28 by lemarino         ###   ########.fr       */
+/*   Updated: 2025/02/24 15:15:14 by lemarino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	count_words(const char *str, char c)
-{
-	int	i;
-	int	words;
-
-	i = 0;
-	words = 0;
-	while (str[i])
-	{
-		while (str[i] && str[i] == c)
-			i++;
-		if (str[i])
-			words++;
-		while (str[i] && str[i] != c)
-		{
-			i++;
-		}
-	}
-	return (words);
-}
 
 static int	wordlen(const char *s, char c)
 {
@@ -45,7 +24,7 @@ static int	wordlen(const char *s, char c)
 	return (l);
 }
 
-static char	**freestr(char **s)
+static char	**freemtrx(char **s)
 {
 	int	i;
 
@@ -81,7 +60,7 @@ char	**ft_split(char const *s, char c)
 			i++;
 		r[j] = ft_substr(s, i, wordlen(&s[i], c));
 		if (!r[j])
-			return (freestr(r));
+			return (freemtrx(r));
 		j++;
 		i += wordlen(&s[i], c);
 		while (s[i] == c && s[i] != '\0')

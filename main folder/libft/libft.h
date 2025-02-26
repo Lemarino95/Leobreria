@@ -6,7 +6,7 @@
 /*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 10:59:03 by lemarino          #+#    #+#             */
-/*   Updated: 2025/02/12 18:41:58 by lemarino         ###   ########.fr       */
+/*   Updated: 2025/02/26 11:53:33 by lemarino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void			*ft_calloc(size_t nmemb, size_t size);
 char			*ft_strdup(const char *s);
 char			*ft_substr(const char *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
-char			*ft_strtrim(char const *s1, char const *set);
+char			*ft_strtrim(char *s1, char const *set);
 char			*ft_itoa(int n);
 char			**ft_split(char const *s, char c);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
@@ -84,5 +84,7 @@ int				ft_print_hex(unsigned int nbr, const char input);
 int				ft_print_u(unsigned int n);
 char			*get_next_line(int fd);
 void			*ft_realloc(void *ptr, size_t size);
+int				ft_atoi_base(const char *str, int base);
+int				count_words(const char *str, char c);
 
 #endif

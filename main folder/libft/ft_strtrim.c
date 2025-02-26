@@ -6,7 +6,7 @@
 /*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 15:37:28 by lemarino          #+#    #+#             */
-/*   Updated: 2025/02/12 18:40:02 by lemarino         ###   ########.fr       */
+/*   Updated: 2025/02/21 17:29:52 by lemarino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 //Allocates (with malloc(3)) and returns a copy of ’s1’
 //  with the characters specified in ’set’
 //	removed from the beginning and the end of the string.
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char *s1, char const *set)
 {
 	size_t		start;
 	size_t		end;
@@ -27,5 +27,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (end > 0 && ft_strchr(set, s1[end]))
 		end--;
 	s2 = ft_substr(s1, start, end - start + 1);
+	free(s1);
 	return (s2);
 }
