@@ -6,7 +6,7 @@
 /*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 10:59:03 by lemarino          #+#    #+#             */
-/*   Updated: 2025/02/26 16:47:07 by lemarino         ###   ########.fr       */
+/*   Updated: 2025/03/04 12:38:51 by lemarino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 # include <stdarg.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 10
+#  define BUFFER_SIZE 1
 # endif
 
 typedef struct s_list
@@ -83,8 +83,9 @@ int				ft_print_p(intptr_t *p);
 int				ft_print_hex(unsigned int nbr, const char input);
 int				ft_print_u(unsigned int n);
 char			*get_next_line(int fd);
-void			*ft_realloc(void *ptr, size_t old_size, size_t size);
+void			*ft_realoc(void *ptr, size_t old_size, size_t size);
 int				ft_atoi_base(const char *str, int base);
 int				count_words(const char *str, char c);
+int				ft_strrcmp(const char *s1, const char *s2, size_t n);
 
 #endif
