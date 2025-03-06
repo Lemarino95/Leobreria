@@ -83,7 +83,7 @@ int				ft_print_p(intptr_t *p);
 int				ft_print_hex(unsigned int nbr, const char input);
 int				ft_print_u(unsigned int n);
 char			*get_next_line(int fd);
-void			*ft_realoc(void *ptr, size_t old_size, size_t size);
+void			*ft_realloc(void *ptr, size_t old_size, size_t size);
 int				ft_atoi_base(const char *str, int base);
 int				count_words(const char *str, char c);
 int				ft_strrcmp(const char *s1, const char *s2, size_t n);
