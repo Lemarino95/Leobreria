@@ -20,7 +20,7 @@ then the call is equivalent to malloc(size), for all values of size; if size is
 equal to zero, and ptr is not NULL, then the call is equivalent to free(ptr).
 Unless ptr is NULL, it must have been re turned by an earlier call to malloc(),
 calloc(), or realloc().*/
-void	*ft_realoc(void *ptr, size_t old_size, size_t size)
+void	*ft_realloc(void *ptr, size_t old_size, size_t size)
 {
 	void	*new_ptr;
 
