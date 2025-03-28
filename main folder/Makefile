@@ -38,8 +38,8 @@ $(NAME): $(LIBFT) $(SRC_MAIN)
 #bonus: $(LIBFT) $(NAME_BONUS)
 
 #$(NAME_BONUS): $(LIBFT) $(SRC_BONUS)
-	$(CC) $(CFLAGS) $(SRC_BONUS) $(LIBFT) -o $(NAME_BONUS)
-	@echo "$(CYAN)Checker compiled!$(NO_COLOR)"
+#	$(CC) $(CFLAGS) $(SRC_BONUS) $(LIBFT) -o $(NAME_BONUS)
+#	@echo "$(CYAN)Checker compiled!$(NO_COLOR)"
 
 clean:
 	@echo "$(YELLOW)Cleaning...$(NO_COLOR)"
@@ -47,7 +47,7 @@ clean:
 
 fclean: clean
 	@echo "$(RED)Full Cleaning...$(NO_COLOR)"
-	@	rm -rf $(OBJ_DIR) $(NAME) $(NAME_BONUS)
+	@	rm -rf $(OBJ_DIR) $(NAME) #$(NAME_BONUS)
 	@	$(MAKE) -C $(LIBFT_DIR) fclean --quiet
 
 re: fclean all
