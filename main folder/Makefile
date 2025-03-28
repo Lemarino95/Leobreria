@@ -1,7 +1,7 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -I libft -I minilibx-linux -g
 NAME = push_swap
-#NAME_BONUS = checker
+#NAME_BONUS = 
 OBJ_DIR = obj
 
 SRC_MAIN = 
