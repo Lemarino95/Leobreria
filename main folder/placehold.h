@@ -18,6 +18,7 @@
 
 /*~~~~~~~~~~~~BACKGROUNDS~~~~~~~~~~~~~*/
 # define BGMAGENTA "\033[45m"
+# define BLACK_ON_WHITE "\e[107;30m"
 # define NO_BG "\e[49m"
 
 /*~~~~~~~~~~~~~~~MORE~~~~~~~~~~~~~~~*/
