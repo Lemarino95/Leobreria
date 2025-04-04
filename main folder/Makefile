@@ -17,11 +17,11 @@ LIBFT = $(LIBFT_DIR)/libft.a
 
 NO_COLOR = \033[0m
 RED = \033[31m
-GREEN = \033[32m
+GREEN = \033[32;5m
 YELLOW = \033[33m
 BLUE = \033[34m
 MAGENTA = \033[35m
-CYAN = \033[36m
+CYAN = \033[36;5m
 
 all: $(LIBFT) $(NAME)
 
@@ -39,7 +39,7 @@ $(NAME): $(LIBFT) $(SRC_MAIN)
 
 #$(NAME_BONUS): $(LIBFT) $(SRC_BONUS)
 #	$(CC) $(CFLAGS) $(SRC_BONUS) $(LIBFT) -o $(NAME_BONUS)
-#	@echo "$(CYAN)Checker compiled!$(NO_COLOR)"
+#	@echo "$(CYAN)Bonus compiled!$(NO_COLOR)"
 
 clean:
 	@echo "$(YELLOW)Cleaning...$(NO_COLOR)"
