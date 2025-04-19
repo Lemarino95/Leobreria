@@ -28,7 +28,7 @@ void	**free_dpc(char **double_pointer_char)
 }
 
 // Frees an int matrix
-void	**free_dpi(int **double_pointer_int)
+/*void	**free_dpi(int **double_pointer_int)
 {
 	unsigned int	i;
 
@@ -40,4 +40,4 @@ void	**free_dpi(int **double_pointer_int)
 	}
 	free(double_pointer_int);
 	return (NULL);
-}
+}*/
