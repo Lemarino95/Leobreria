@@ -14,7 +14,7 @@ SRC = ft_atoi.c ft_strlen.c ft_bzero.c ft_strlcat.c ft_isalpha.c ft_isdigit.c\
 		ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c\
 		ft_printf.c ft_print_p.c ft_print_hex.c ft_print_u.c get_next_line.c\
 		ft_realloc.c ft_atoi_base.c count_words.c ft_strrcmp.c ft_strcmp.c\
-		free_dp.c\
+		free_dp.c ft_until_chr.c\
 		ft_printfd.c fd_print_p.c fd_print_u.c fd_print_hex.c fd_print_n.c\
 
 

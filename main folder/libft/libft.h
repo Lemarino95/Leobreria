@@ -6,7 +6,7 @@
 /*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 10:59:03 by lemarino          #+#    #+#             */
-/*   Updated: 2025/05/31 10:43:29 by lemarino         ###   ########.fr       */
+/*   Updated: 2025/05/31 10:59:28 by lemarino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ void			ft_bzero(void *s, size_t n);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strchr2(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
+char			*ft_until_chr(const char *s, int c);
+void			ft_until_chr_print(const char *s, int c);
 char			*ft_strnstr(const char *big, const char *little, size_t len);
 size_t			ft_strlcpy(char *dest, const char *src, size_t size);
 void			*ft_calloc(size_t nmemb, size_t size);
