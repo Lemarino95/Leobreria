@@ -1,6 +1,6 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -I libft #-g
-NAME = push_swap
+NAME = progam_name
 #NAME_BONUS = 
 OBJ_DIR = obj
 

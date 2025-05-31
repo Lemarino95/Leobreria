@@ -6,7 +6,7 @@
 /*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 10:59:03 by lemarino          #+#    #+#             */
-/*   Updated: 2025/04/08 18:58:21 by lemarino         ###   ########.fr       */
+/*   Updated: 2025/05/31 10:43:29 by lemarino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,5 +90,10 @@ int				ft_strrcmp(const char *s1, const char *s2, size_t n);
 int				ft_strcmp(const char *s1, const char *s2);
 void			**free_dpc(char **double_pointer_char);
 void			**free_dpi(int **double_pointer_char);
+int				ft_printfd(int fd, const char *input, ...);
+int				fd_print_p(int fd, intptr_t *p);
+int				fd_print_hex(int fd, unsigned int nbr, const char input);
+int				fd_print_u(int fd, unsigned int n);
+int				fd_print_n(int fd, int n);
 
 #endif
