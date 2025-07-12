@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/04 15:37:28 by lemarino          #+#    #+#             */
-/*   Updated: 2025/07/08 18:59:38 by lemarino         ###   ########.fr       */
+/*   Created: 2025/02/05 12:13:18 by lemarino          #+#    #+#             */
+/*   Updated: 2025/07/08 18:58:47 by lemarino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-//Applies the function ’f’ on each character of the string passed
-// as argument, passing its index as first argument.
-// Each character is passed by address to ’f’ to be modified if necessary.
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+#include "../libft.h"
+//Returns a pointer to the first occurrence of the character c in the string s.
+char	*ft_strchr(const char *s, int c)
 {
-	int	i;
+	int		i;
+	char	chr;
 
+	chr = (char)c;
 	i = 0;
 	while (s[i])
 	{
-		f(i, &s[i]);
+		if (s[i] == chr)
+			return ((char *)&s[i]);
 		i++;
 	}
+	if (chr == 0)
+		return ((char *)(s + i));
+	return (NULL);
 }

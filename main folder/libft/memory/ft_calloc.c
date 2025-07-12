@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 15:37:28 by lemarino          #+#    #+#             */
-/*   Updated: 2025/07/08 18:59:38 by lemarino         ###   ########.fr       */
+/*   Updated: 2025/07/08 18:57:22 by lemarino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-//Applies the function ’f’ on each character of the string passed
-// as argument, passing its index as first argument.
-// Each character is passed by address to ’f’ to be modified if necessary.
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
-{
-	int	i;
+#include "../libft.h"
 
-	i = 0;
-	while (s[i])
+void	*ft_calloc(size_t nmemb, size_t size)
+{
+	void			*str;
+	size_t			i;
+	unsigned char	*c;
+
+	if (nmemb == 0 || size == 0)
 	{
-		f(i, &s[i]);
-		i++;
+		nmemb = 1;
+		size = 1;
 	}
+	str = malloc((nmemb * size));
+	if (!str)
+		return (NULL);
+	i = 0;
+	c = (unsigned char *)str;
+	while (i < (nmemb * size))
+		c[i++] = '\0';
+	return (str);
 }

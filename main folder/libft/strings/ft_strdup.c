@@ -1,27 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 15:37:28 by lemarino          #+#    #+#             */
-/*   Updated: 2025/07/08 18:59:38 by lemarino         ###   ########.fr       */
+/*   Updated: 2025/07/08 18:58:58 by lemarino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-//Applies the function ’f’ on each character of the string passed
-// as argument, passing its index as first argument.
-// Each character is passed by address to ’f’ to be modified if necessary.
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+#include "../libft.h"
+//The  strdup() function returns a pointer to a new string 
+// which is a duplicate of the string s.  Memory for the
+// new string is obtained with malloc(), and can be freed with free().
+char	*ft_strdup(const char *s)
 {
-	int	i;
+	char		*src;
+	char		*dst;
+	size_t		i;
+	size_t		j;
 
 	i = 0;
-	while (s[i])
+	j = 0;
+	src = (char *)s;
+	while (src[j])
+		j++;
+	dst = malloc(j + 1);
+	if (!(dst))
+		return (NULL);
+	while (src[i])
 	{
-		f(i, &s[i]);
+		dst[i] = src[i];
 		i++;
 	}
+	dst[i] = '\0';
+	return (dst);
 }
