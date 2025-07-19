@@ -20,8 +20,8 @@ SRC = chars/ft_isalpha.c chars/ft_isdigit.c \
 		strings/ft_bzero.c strings/ft_strchr.c  strings/ft_strchr2.c strings/ft_strrchr.c \
 		strings/ft_bzero.c \
 		strings/ft_strnstr.c strings/ft_split.c strings/ft_until_chr.c\
-		numbers/ft_atoi.c numbers/ft_itoa.c numbers/ft_atoi_base.c \
-		numbers/ft_itoa.c numbers/ft_itoa.c \
+		numbers/ft_atoi.c numbers/ft_atoi_base.c \
+		numbers/ft_itoa.c numbers/ft_power.c \
 		print/ft_putchar_fd.c print/ft_putstr_fd.c print/ft_putendl_fd.c\
 		print/ft_putnbr_fd.c\
 		print/ft_printf.c print/ft_print_p.c print/ft_print_hex.c print/ft_print_u.c\

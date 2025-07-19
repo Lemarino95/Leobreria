@@ -6,7 +6,7 @@
 /*   By: lemarino <lemarino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 10:59:03 by lemarino          #+#    #+#             */
-/*   Updated: 2025/07/08 18:41:21 by lemarino         ###   ########.fr       */
+/*   Updated: 2025/07/19 23:14:31 by lemarino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,8 @@ void			**free_dpi(int **double_pointer_char);
 int				ft_atoi(const char *nptr);
 int				ft_atoi_base(const char *str, int base);
 char			*ft_itoa(int n);
+int				ft_ipow(int nbr, int power);
+int				ft_fpow(float nbr, int power);
 /*      /strings     */
 size_t			ft_strlen(const char *s);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
