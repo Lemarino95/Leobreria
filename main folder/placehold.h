@@ -17,7 +17,11 @@
 # define BRCYAN "\033[96m"
 
 /*~~~~~~~~~~~~BACKGROUNDS~~~~~~~~~~~~~*/
-# define BGMAGENTA "\033[45m"
+# define BGR "\033[41m"
+# define BGG "\033[42m"
+# define BGY "\033[43m"
+# define BGB "\033[44m"
+# define BGM "\033[45m"
 # define BLACK_ON_WHITE "\e[107;30m"
 # define NO_BG "\e[49m"
 
