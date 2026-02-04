@@ -6,15 +6,15 @@
 /*~~~~~~~~~~~~~~~COLORS~~~~~~~~~~~~~~~*/
 # define NO_ALL "\033[0m"
 
-# define NO_COLOR "\e[39m"
+# define NO_COLOR "\033[39m"
 # define BLACK "\e[30m"
-# define RED "\033[31m"
+# define RED "\e[31m"
 # define GREEN "\e[32m"
-# define BRGREEN "\033[32;1m"
-# define YELLOW "\033[33m"
-# define BLUE "\033[34m"
-# define MAGENTA "\033[95m"
-# define BRCYAN "\033[96m"
+# define BRGREEN "\e[32;1m"
+# define YELLOW "\e[33m"
+# define BLUE "\e[34m"
+# define MAGENTA "\e[95m"
+# define BRCYAN "\e[96m"
 
 /*~~~~~~~~~~~~BACKGROUNDS~~~~~~~~~~~~~*/
 # define BGR "\033[41m"
